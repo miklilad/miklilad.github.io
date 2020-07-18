@@ -8,14 +8,21 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 .navbar {
     background: linear-gradient(rgba(52,58,64, 0.9), rgba(52,58,64, 0.6));
 }
 
 #home {
+    display: flex;
     background-color: #f4f4f4f4;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 #projects {
     background-color: #a4a4a4a4;
