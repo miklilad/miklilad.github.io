@@ -4,9 +4,51 @@
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 .navbar {
-    background-color: red;
+    background: linear-gradient(rgba(52,58,64, 0.9), rgba(52,58,64, 0.6));
+}
 
+#home {
+    background-color: #f4f4f4f4;
+    height: 100vh;
+}
+
+#projects {
+    background-color: #a4a4a4a4;
+    height: 100vh;
+}
+
+.box {
+    border: 3px solid black;
+    background-color: aquamarine;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.child {
+    border: 3px dotted black;
+    width: 50px;
+}
+
+.child1 {
+    background-color: yellow;
+    height: 50%;
+}
+
+.child2 {
+    background-color: cadetblue;
+    height: 40%;
+}
+
+.child3 {
+    background-color: lightskyblue;
+    height: 30%;
 }
