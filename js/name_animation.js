@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
             logoPaths[i].style.animation = `line-anim ${animationLength}s ease forwards ${delay}s`;
             delay+=delayIncrement;
         }
-        delay += animationLength;
+        console.log(delay);
+        delay += animationLength / 2;
+        console.log(delay);
         logo.querySelector("g").style.animation = `fill 0.5s ease forwards ${delay}s`;
     }
 // Set the id of SVG, delay time in seconds to start animation and delay between each animation
