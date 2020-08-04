@@ -13,9 +13,10 @@ html {
 
 .intro {
     display: flex;
-    flex-direction: column;
+    flex-grow: 1;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
-    font-size: 2rem;
+    font-size: 5vh;
     text-align: center;
 }
 
@@ -23,31 +24,42 @@ html {
     margin: 0 10%;
 }
 
-.svg-container {
-    width: 100%;
-}
-
 #home {
-    display: grid;
-    grid-template-rows: fit-content(70%) auto 10%;
+    display: flex;
+    flex-flow: column wrap;
     justify-content: space-between;
     height: 100vh;
     background-color: #f0f0f0;
 }
 
 #keyboard {
-    width: 100%;
+    align-self: flex-start;
+    max-width: 100%;
+    max-height: 60%;
     object-fit: contain;
 }
 
 #name {
-    width: 100%;
+    max-width: 100%;
+    height: 50%;
     padding: 0 5%;
 }
+
 
 #projects {
     background-color: #a4a4a4a4;
     height: 100vh;
+}
+
+@media screen and (min-aspect-ratio: 8/5) {
+    #home {
+        grid-template-columns: auto auto;
+    }
+
+    #intro {
+        grid-column: 2;
+        grid-row: 1;
+    }
 }
 
 @keyframes line-anim {
