@@ -14,9 +14,10 @@ html {
 .intro {
     display: flex;
     flex-grow: 1;
+    flex-shrink: 1;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    font-size: 5vh;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -25,9 +26,6 @@ html {
 }
 
 #home {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
     height: 100vh;
     background-color: #f0f0f0;
 }
@@ -51,15 +49,12 @@ html {
     height: 100vh;
 }
 
-@media screen and (min-aspect-ratio: 8/5) {
-    #home {
-        grid-template-columns: auto auto;
-    }
-
-    #intro {
-        grid-column: 2;
-        grid-row: 1;
-    }
+.content {
+    height: 75%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @keyframes line-anim {
@@ -71,6 +66,72 @@ html {
 @keyframes fill {
     to {
         fill: black;
+    }
+}
+
+#home a {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin: auto;
+    display: inline-block;
+    padding-top: 10vh;
+    color: #000;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+#home a:hover {
+    opacity: .5;
+}
+
+#home a span {
+    display: block;
+    position: relative;
+    top: -30px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb04 2s infinite;
+    animation: sdb04 2s infinite;
+}
+
+@media screen and (min-aspect-ratio: 8/5){
+    #keyboard {
+        max-height: 100%;
+    }
+    .intro {
+        max-width: 50%;
+    }
+}
+
+@-webkit-keyframes sdb04 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+}
+@keyframes sdb04 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
     }
 }
 
