@@ -44,29 +44,12 @@ html {
 }
 
 
-#projects {
-    background-color: #a4a4a4a4;
-    height: 100vh;
-}
-
 .content {
     height: 75%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-}
-
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes fill {
-    to {
-        fill: black;
-    }
 }
 
 #home a {
@@ -99,8 +82,17 @@ html {
     border-bottom: 1px solid #000;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    -webkit-animation: sdb04 2s infinite;
-    animation: sdb04 2s infinite;
+    -webkit-animation: button-anim 2s infinite;
+    animation: button-anim 2s infinite;
+}
+
+@media screen and (min-aspect-ratio: 1/1){
+    #keyboard {
+        max-height: 80%;
+    }
+    .intro {
+        max-width: 40%;
+    }
 }
 
 @media screen and (min-aspect-ratio: 8/5){
@@ -112,7 +104,19 @@ html {
     }
 }
 
-@-webkit-keyframes sdb04 {
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    to {
+        fill: black;
+    }
+}
+
+@-webkit-keyframes button-anim {
     0% {
         -webkit-transform: rotate(-45deg) translate(0, 0);
     }
@@ -123,7 +127,7 @@ html {
         -webkit-transform: rotate(-45deg) translate(0, 0);
     }
 }
-@keyframes sdb04 {
+@keyframes button-anim {
     0% {
         transform: rotate(-45deg) translate(0, 0);
     }
